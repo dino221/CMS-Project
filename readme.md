@@ -1,8 +1,8 @@
 ### Install
 
 - composer update
-- php7.2 artisan key:generate
-- php7.2 artisan migrate --seed
+- php artisan key:generate
+- php artisan migrate --seed
 
 ### admin panel after migrate --seed
 
