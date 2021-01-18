@@ -15,4 +15,10 @@
 - editor
 
 - user@seminar.com
-- admin
+- user
+
+
+
+//Admin moze sve vidjeti i uredivati i ne moze se obrisati
+//Editor moze sve editirati
+//User moze uredivati samo svoj profil
