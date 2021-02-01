@@ -15,9 +15,9 @@ class Controller extends BaseController
 
     /**
      * Display a index page.
-     * 
+     *
      * @param \Illuminate\Http\Request $request
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function home(Request $request)
@@ -28,14 +28,14 @@ class Controller extends BaseController
 
     /**
      * Display a index page.
-     * 
+     *
      * @param \Illuminate\Http\Request $request
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
 	{
-      
+
         $pages = Page::get();
 
         /* MENU ROUTES */
@@ -51,19 +51,20 @@ class Controller extends BaseController
 		if (!$page) {
 			abort(404);
         }
-            
+
          return view('app.inner', compact('page'));
 	}
 
     /**
      * Display a contact page.
-     * 
+     *
      * @param \Illuminate\Http\Request $request
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function contact(Request $request)
 	{
         return view('app.contact');
     }
+
 }

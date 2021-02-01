@@ -22,3 +22,9 @@
 //Admin moze sve vidjeti i uredivati i ne moze se obrisati
 //Editor moze sve editirati
 //User moze uredivati samo svoj profil
+
+
+//Ako ne radi slug treba u index.blade.php dodati @if($aboutUs) @endif
+
+// U User.php vrsilo dvostruku enkripciju pa sam obrisao dio
+                                              

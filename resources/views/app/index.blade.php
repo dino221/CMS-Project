@@ -10,7 +10,7 @@
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <h1>Dobrodošli na <span>Laravel Seminar Projekt</spa>
       </h1>
-      <h2>Mi smo tim nadarenih dizajnera koji izrađuju web stranice s Laravelom</h2>
+      <h2>Dino Bosilj</h2>
       <div class="d-flex">
       @if($aboutUs)
         <a href="{{route('app.inner', [str_slug($aboutUs->slug), $aboutUs->id])}}" class="btn-get-started scrollto">Više o nama</a>
