@@ -16,7 +16,9 @@
                 </div>
                 <div class="card-body">
                 @hasrole('admin')
+                
                     <a class="btn btn-primary" href="{{route('admin.pages.create')}}">Nova stranica</a>
+            
                 @endhasrole
                 <div class="table-responsive">
                     <table class="table">
@@ -28,6 +30,10 @@
                         @hasrole('admin')
                         <th >Obriši</th>
                         @endhasrole
+                        @hasrole('admin')
+                        <th>Link</th>
+                        @endhasrole
+
                     </thead>
                     <tbody>
                         @foreach($pages as $page)
@@ -50,18 +56,40 @@
                                             {{method_field('DELETE')}}
                                             {{csrf_field()}}
                                             <button class="btn btn-light" type="submit">Obriši stranicu</button>
+                                            
                                         </form>
                                     </td>
                                     @endhasrole
+                                    @hasrole('admin')
+                                    <td> 
+
+                                    
+                <div class>
+                
+                        <ol class="nav-item">
+                <a alt="home" title="homepage" target="_blank" class="nav-link" href="/">
+                  <i class="now-ui-icons business_globe"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Homepage</span>
+                  </p>
+                </a>
+              </ol>
+              @endhasrole   
+                                        
+
+
+
+
+
+
+
+
                             </tr>
                         @endforeach
                     </tbody>
                     </table>
                     {{$pages->links()}}<br>
-                    <h4>Pregled novih stranica</h4>
-                    @foreach($pages as $page)
-            <ol><a href="{{route('app.inner', [str_slug($page->slug), $page->id])}}">{{$page->title}}</a></ol>
-          @endforeach
+                    
                 </div>
                 </div>
             </div>
