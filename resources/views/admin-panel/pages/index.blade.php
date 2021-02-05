@@ -57,7 +57,11 @@
                         @endforeach
                     </tbody>
                     </table>
-                    {{$pages->links()}}
+                    {{$pages->links()}}<br>
+                    <h4>Pregled novih stranica</h4>
+                    @foreach($pages as $page)
+            <ol><a href="{{route('app.inner', [str_slug($page->slug), $page->id])}}">{{$page->title}}</a></ol>
+          @endforeach
                 </div>
                 </div>
             </div>
