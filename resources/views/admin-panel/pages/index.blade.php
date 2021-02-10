@@ -31,7 +31,7 @@
                         <th >Obriši</th>
                         @endhasrole
                         @hasrole('admin')
-                        <th>Link</th>
+                        <th>Linkovi</th>
                         @endhasrole
 
                     </thead>
@@ -61,29 +61,18 @@
                                     </td>
                                     @endhasrole
                                     @hasrole('admin')
-                                    <td> 
-
-                                    
-                <div class>
+                                    <td>
+                                    <div class>
                 
-                        <ol class="nav-item">
-                <a alt="home" title="homepage" target="_blank" class="nav-link" href="/">
-                  <i class="now-ui-icons business_globe"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Homepage</span>
-                  </p>
-                </a>
-              </ol>
-              @endhasrole   
-                                        
-
-
-
-
-
-
-
-
+                                    <ol class="nav-item">
+                                        <a alt="home" title="links" target="_blank" class="nav-link" href="{{route('app.inner', [str_slug($page->slug), $page->id])}}">
+                                            <i class="now-ui-icons business_globe"></i>
+                                            <p>
+                                                <span class="d-lg-none d-md-block">Homepage</span>
+                                            </p>
+                                        </a>
+                                    </ol>
+                                    @endhasrole 
                             </tr>
                         @endforeach
                     </tbody>
@@ -92,6 +81,8 @@
                     
                 </div>
                 </div>
+               
+            
             </div>
         </div>
     </div>
@@ -100,3 +91,4 @@
 @section('scripts') 
 
 @endsection
+

@@ -136,7 +136,7 @@
               </li>
               <li class="nav-item">
                 <a alt="home" title="homepage" target="_blank" class="nav-link" href="/">
-                  <i class="now-ui-icons business_globe"></i>
+                  <i class="now-ui-icons business_bank"></i>
                   <p>
                     <span class="d-lg-none d-md-block">Homepage</span>
                   </p>
